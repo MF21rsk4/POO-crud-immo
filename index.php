@@ -40,8 +40,9 @@ $annonces_Tab_Objet = $annonceManager->getListObjectsAnnonces();
 	<hr>
 <thead>
 	<h2 class="text-center"  style="color:orange"><b> ~ANNOUNCES~ </b></h2><hr>
-	<tr style="color:tomato">
+	<tr class="text-center" style="color:tomato;">
 		<th>-Title-</th>
+		<th>-Type-</th>
 		<th>-Description-</th>					
 		<th>-Postcode-</th>
 		<th>-City-</th>
@@ -49,18 +50,19 @@ $annonces_Tab_Objet = $annonceManager->getListObjectsAnnonces();
 		<th>-Reservation-</th>
 	</tr>
 </tr>
-<input type="button" class="btn btn-outline-warning text-center"
-							id="modifier" value="modifier" />
+<a method="$_POST" href="modifier.php" class="btn btn-outline-warning text-center"
+							id="modifier" value="modifier" >modifier</a>
 </thead>
 	<?php foreach ($annonces_Tab_Objet as $key => $value):?>
-			<tr>
+			<tr style=" border: 3px solid black;">
 				<!-- <td><?= $key; ?></td> -->
-				<td><?= $value->getTitle(); ?></td>
-				<td><?= $value->getDescription(); ?></td>
-				<td><?= $value->getPostcode(); ?></td>
-				<td><?= $value->getCity(); ?></td>
-				<td><?= $value->getPrice(); ?>&euro;</td>
-				<td><?= $value->getReservation_message(); ?></td>
+				<td class="bg-warning"><hr><input type="checkbox" name="case" value="" />-<label for="case"><b><?= $value->getTitle(); ?></b></td>
+				<td><?= $value->getCategory_id(); ?></td>
+				<td><hr><?= $value->getDescription(); ?></td>
+				<td><hr><?= $value->getPostcode(); ?></td>
+				<td><hr><?= $value->getCity(); ?></td>
+				<td><hr><?= $value->getPrice(); ?>&euro;</td>
+				<td><hr><i>-<?= $value->getReservation_message(); ?></i></td>
 			</tr>
 	<?php endforeach; ?>
 
