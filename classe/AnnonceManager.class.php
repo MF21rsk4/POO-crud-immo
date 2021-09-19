@@ -82,6 +82,13 @@ class AnnonceManager  {
 
         }
 
+        public function deleteById($id) {
+            $this->pdo->beginTransaction();
+            $delete_advert = $this->pdo->query('DELETE FROM advert WHERE id = '.$id);
+            $this->pdo->commit();
+            return ($delete_advert->rowCount());
+        }
+
         // public function getListAnnonces() {
         //     $list_annonces = $this->pdo->query('SELECT title FROM Annonce;');
         //     return $list_annonces->fetchAll(PDO::FETCH_ASSOC);

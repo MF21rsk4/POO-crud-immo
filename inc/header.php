@@ -68,7 +68,7 @@
 					</div>
 				</li>
 				<li class="nav-item button mx-4">
-					<a class="nav-link button-toggle" href="modifier.php" id="navbarbuttonMenuLink" role="button" data-toggle="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-monument"></i> Pyramides </a>
+					<a class="nav-link button-toggle" href="consulter.php" id="navbarbuttonMenuLink" role="button" data-toggle="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-monument"></i> Pyramides </a>
 					<div class="button-menu blue-grey lighten-2" aria-labelledby="navbarButtonMenuLink">
 					</div>
 				</li>
