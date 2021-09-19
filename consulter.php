@@ -8,13 +8,16 @@ include_once("inc/connexion.php");
 
 $annonceManager = new AnnonceManager ($bdd);
 $annonces_Tab_Objet = $annonceManager->getListObjectsAnnonces();
+
+
+
 ?>
 
 
 <table>
 	<hr>
 <thead>
-	<h2 class="text-center"  style="color:orange"><b> ~ANNOUNCES~ </b></h2><hr>
+	<h2 class="text-center"  style="color:orange"><b> ~Liste des Annonces~ </b></h2><hr>
 	<tr class="text-center" style="color:tomato;">
 		<th>-Title-</th>
 		<th>-Type-</th>

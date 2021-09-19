@@ -67,7 +67,7 @@ class AnnonceManager  {
         // méthode qui retourne la liste des annonces en BDD
         public function getListObjectsAnnonces() {
        
-            $list_annonces = $this->pdo->query('SELECT title, description, postcode, city, price, reservation_message FROM advert');
+            $list_annonces = $this->pdo->query('SELECT title, category_id, description, postcode, city, price, reservation_message FROM advert');
                                                
             $a=$list_annonces->fetchAll(PDO::FETCH_ASSOC);
 
