@@ -59,6 +59,7 @@ if (isset( $_POST['modifier'])) {
 		<th>-City-</th>
 		<th>-Price-</th>
 		<th>-Reservation-</th>
+		<!-- <th>-Price-</th> -->
 	</tr>
 </tr>
 <a method="$_POST" href="modifier.php" class="btn btn-outline-warning text-center"
